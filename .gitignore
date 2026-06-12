@@ -1,7 +1,10 @@
-node_modules
+node_modules/
 .env
-.env.local
-.next
-dist
+.env.*
+!.env.example
+.next/
+dist/
+.turbo/
+packages/db/generated/
+coverage/
 *.log
-.DS_Store

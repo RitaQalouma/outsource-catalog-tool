@@ -1,23 +1,23 @@
 {
   "name": "outsource-catalog-tool",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "type": "module",
+  "license": "ISC",
   "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "db:generate": "pnpm --filter @catalog/db generate",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "packageManager": "pnpm@11.5.3",
   "devEngines": {
-    "packageManager": {
-      "name": "pnpm",
-      "version": "^11.5.3",
-      "onFail": "download"
-    }
+    "packageManager": { "name": "pnpm", "version": "^11.5.3", "onFail": "download" }
   },
-  "type": "module",
   "devDependencies": {
-    "turbo": "^2.9.17"
+    "prisma": "^7.8.0",
+    "turbo": "^2.9.17",
+    "prettier": "^3.0.0"
   }
 }
