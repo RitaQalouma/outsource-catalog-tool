@@ -1,0 +1,302 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: #1f2937; /* gray-800 */
+  background-color: #f9fafb; /* gray-50 */
+}
+
+/* Component recipes – written without @apply so Tailwind v4 picks them up directly */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #4f46e5;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.15s;
+  border-radius: 0.375rem;
+}
+.btn-primary:hover {
+  background-color: #4338ca;
+}
+.btn-primary:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.3);
+}
+.btn-primary:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.btn-primary:disabled:hover {
+  background-color: #4f46e5;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid #d1d5db;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  transition: background-color 0.15s;
+  border-radius: 0.375rem;
+}
+.btn-secondary:hover {
+  background-color: #f9fafb;
+}
+.btn-secondary:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.3);
+}
+.btn-secondary:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.btn-accent {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #0ea5e9;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+  border-radius: 0.5rem;
+  transition: background-color 0.15s;
+}
+.btn-accent:hover {
+  background-color: #0284c7;
+}
+.btn-accent:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.3);
+}
+
+.btn-danger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #ef4444;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+  border-radius: 0.375rem;
+  transition: background-color 0.15s;
+}
+.btn-danger:hover {
+  background-color: #dc2626;
+}
+.btn-danger:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.3);
+}
+.btn-danger:disabled {
+  opacity: 0.6;
+}
+
+.btn-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4f46e5;
+  transition: color 0.15s;
+}
+.btn-link:hover {
+  color: #3730a3;
+}
+
+.card {
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  background-color: white;
+  padding: 1.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+.form-input,
+.form-select,
+.form-textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.25rem;
+  border: 1px solid #d1d5db;
+  background-color: white;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  color: #1f2937;
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.form-input::placeholder,
+.form-select::placeholder,
+.form-textarea::placeholder {
+  color: #9ca3af;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: #6366f1;
+  outline: none;
+  box-shadow: 0 0 0 1px #6366f1;
+}
+
+.form-input:disabled,
+.form-select:disabled,
+.form-textarea:disabled {
+  cursor: not-allowed;
+  background-color: #f3f4f6;
+  color: #6b7280;
+}
+
+/* The only difference for selects is a larger right padding (for the arrow) */
+.form-select {
+  padding-right: 2rem;
+}
+
+/* Textareas get a minimum height */
+.form-textarea {
+  min-height: 5rem;
+}
+.form-input:focus {
+  border-color: #6366f1;
+  outline: none;
+  box-shadow: 0 0 0 1px #6366f1;
+}
+.form-input:disabled {
+  cursor: not-allowed;
+  background-color: #f3f4f6;
+  color: #6b7280;
+}
+
+.form-textarea {
+  min-height: 5rem;
+}
+
+.form-select {
+  padding-right: 2rem;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.table-base {
+  min-width: 100%;
+  font-size: 0.875rem;
+  border-collapse: collapse;
+}
+
+.table-header {
+  background-color: #4f46e5;
+}
+
+.table-header-cell {
+  padding: 0.75rem 1.5rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: white;
+}
+
+.table-body > * + * {
+  border-top: 1px solid #e5e7eb;
+}
+
+.table-row {
+  transition: background-color 0.15s;
+}
+.table-row:hover {
+  background-color: #f9fafb;
+}
+
+.table-body-cell {
+  white-space: nowrap;
+  padding: 1rem 1.5rem;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.heading-page {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.heading-section {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.badge-base {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.badge-indigo {
+  background-color: #eef2ff;
+  color: #4338ca;
+}
+
+.badge-sky {
+  background-color: #f0f9ff;
+  color: #0369a1;
+}
+
+.badge-emerald {
+  background-color: #ecfdf5;
+  color: #047857;
+}
+
+.badge-amber {
+  background-color: #fffbeb;
+  color: #b45309;
+}
+
+.badge-red {
+  background-color: #fef2f2;
+  color: #b91c1c;
+}
+
+.badge-gray {
+  background-color: #f3f4f6;
+  color: #374151;
+}

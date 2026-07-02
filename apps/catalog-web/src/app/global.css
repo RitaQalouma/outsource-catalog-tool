@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: #1f2937; /* gray-800 */
+  background-color: #f9fafb; /* gray-50 */
+}
+
+/* Component recipes from the USFF design guide */
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-300 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:bg-indigo-600 rounded;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-300 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-accent {
+    @apply inline-flex items-center gap-2 rounded-lg bg-sky-500 px-3 py-2 text-sm font-medium text-white transition hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-sky-300;
+  }
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 rounded bg-red-500 px-4 py-2 text-sm font-medium text-white transition hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-300 disabled:opacity-60;
+  }
+  .btn-link {
+    @apply text-sm font-medium text-indigo-600 transition hover:text-indigo-800;
+  }
+  .card {
+    @apply rounded-lg border border-gray-200 bg-white p-6 shadow-sm;
+  }
+  .form-label {
+    @apply block text-sm font-medium text-gray-700;
+  }
+ .form-input,
+.form-select,
+.form-textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.25rem;
+  border: 1px solid #d1d5db;
+  background-color: white;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  color: #1f2937;
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.form-input::placeholder,
+.form-select::placeholder,
+.form-textarea::placeholder {
+  color: #9ca3af;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: #6366f1;
+  outline: none;
+  box-shadow: 0 0 0 1px #6366f1;
+}
+
+.form-input:disabled,
+.form-select:disabled,
+.form-textarea:disabled {
+  cursor: not-allowed;
+  background-color: #f3f4f6;
+  color: #6b7280;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.25rem;
+  border: 1px solid #d1d5db;
+  background-color: white;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  color: #1f2937;
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.form-input::placeholder,
+.form-select::placeholder,
+.form-textarea::placeholder {
+  color: #9ca3af;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: #6366f1;
+  outline: none;
+  box-shadow: 0 0 0 1px #6366f1;
+}
+
+.form-input:disabled,
+.form-select:disabled,
+.form-textarea:disabled {
+  cursor: not-allowed;
+  background-color: #f3f4f6;
+  color: #6b7280;
+}
+
+/* The only difference for selects is a larger right padding (for the arrow) */
+.form-select {
+  padding-right: 2rem;
+}
+
+/* Textareas get a minimum height */
+.form-textarea {
+  min-height: 5rem;
+}
+  .form-select {
+    @apply form-input pr-8;
+  }
+  .table-wrapper {
+    @apply overflow-x-auto rounded-lg border border-gray-200 bg-white shadow-sm;
+  }
+  .table-base {
+    @apply min-w-full divide-y divide-gray-200 text-sm;
+  }
+  .table-header {
+    @apply bg-indigo-600;
+  }
+  .table-header-cell {
+    @apply px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-white;
+  }
+  .table-body {
+    @apply divide-y divide-gray-200;
+  }
+  .table-row {
+    @apply transition hover:bg-gray-50;
+  }
+  .table-body-cell {
+    @apply whitespace-nowrap px-6 py-4 text-sm text-gray-700;
+  }
+  .heading-page {
+    @apply text-3xl font-bold text-gray-800;
+  }
+  .heading-section {
+    @apply text-xl font-semibold text-gray-800;
+  }
+  .badge-base {
+    @apply inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium;
+  }
+  .badge-indigo {
+    @apply badge-base bg-indigo-50 text-indigo-700;
+  }
+  .badge-sky {
+    @apply badge-base bg-sky-50 text-sky-700;
+  }
+  .badge-emerald {
+    @apply badge-base bg-emerald-50 text-emerald-700;
+  }
+  .badge-amber {
+    @apply badge-base bg-amber-50 text-amber-700;
+  }
+  .badge-red {
+    @apply badge-base bg-red-50 text-red-700;
+  }
+  .badge-gray {
+    @apply badge-base bg-gray-100 text-gray-700;
+  }
+}

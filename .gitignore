@@ -8,3 +8,4 @@ dist/
 packages/db/generated/
 coverage/
 *.log
+lib/supabase
